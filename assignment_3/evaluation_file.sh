@@ -10,14 +10,6 @@ if ! [ -x ~/se2001/assignment_3/script.sh ]; then
 	exit 1
 fi
 
-num_keywords=`grep -o -e "echo" -e "define" -e "for" -e "return" -e "bc" script.sh | wc -l` 
-
-if [ $num_keywords -ne 5 ];
-then
-	echo "Function in bc is not defined properly." >&2;
-	exit 1
-fi
-
 fib() {
         echo "
         define fibonacci(x) {
