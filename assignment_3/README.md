@@ -1,22 +1,14 @@
 # Assignment 3
 
-Write a function in ` bc ` (basic calculator) to print the ` n `th Fibonacci number in the Fibonacci series. Write your code and save it within file ` script.sh `.
+Define a function ` fibonacci(n) ` in file ` fibonacci.bc `.
 
-Hint : use `echo` and `bc`
+The function takes one positional argument which is an integer, say ` n `, and returns ` n `th Fibonacci number in Fibonacci sequence.
 
-## Optional : 
-
-You can also try the function using bash loops.
-
+Hint : Functions in ` bc `.
 
 ## Example :
 
 Fibonacci sequence : 0, 1, 1, 2, 3, 5, 8, 13, .....
 
-Sample execution and output : 
-```
-~/se2001/assignment_3$ ./script.sh 5
-3
-```
-
-` 3 ` is at the ` 5 `th position in the Fibonacci sequence. 
+If the function is invoked as ` fibonacci(5) `, then the output should be `3`,
+as ` 3 ` is at the ` 5 `th position in the Fibonacci sequence. 
