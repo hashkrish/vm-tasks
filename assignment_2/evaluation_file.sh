@@ -12,7 +12,7 @@ fi
 
 ~/se2001/assignment_2/script.sh
 
-if test -f "/tmp/local_uploads/$(whoami)"; then
+if test -f "/tmp/local_uploads/$(whoami).txt"; then
 	exit 0
 else
 	echo "File not uploaded!" >&2
