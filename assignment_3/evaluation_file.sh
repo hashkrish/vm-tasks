@@ -1,12 +1,7 @@
 #!/usr/bin/bash
 
-if ! [ -f ~/se2001/assignment_3/script.sh ]; then
-	echo "File $HOME/se2001/assignment_3/script.sh not found" >&2
-	exit 1
-fi
-
-if ! [ -x ~/se2001/assignment_3/script.sh ]; then
-	echo "File $HOME/se2001/assignment_3/script.sh is not executable" >&2
+if ! [ -f ~/se2001/assignment_3/fibonacci.bc ]; then
+	echo "File $HOME/se2001/assignment_3/fibonacci.bc not found" >&2
 	exit 1
 fi
 
