@@ -7,4 +7,4 @@ Create a file named `script.sh` that exports two shell variables
 - `GITHUB_USERNAME` that holds the GitHub username Ex: "bscse2001"
 - `GITHUB_REPOSITORY` that holds the GitHub repository name Ex: "se2001-21f1000000"
 
-The repository can be deleted after the evaluation and submission is successful.
+The repository can be deleted after the evaluation and submission of Assignment 5 is successful.

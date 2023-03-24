@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if ! [ -f ~/se2001/assignment_4/script.sh ]; then
-	echo "File /home/$(whoami)/se2001/assignment_2/script.sh not found" >&2
+	echo "File /home/$(whoami)/se2001/assignment_4/script.sh not found" >&2
 	exit 1
 fi
 
