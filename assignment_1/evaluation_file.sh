@@ -32,6 +32,6 @@ for i in {2..4}; do
 			echo "File s1.txt validation failed" >&2
 		fi
 	else
-		echo "File s$i.txt not found in ~/se2001/assignment_$i" >&2
+		echo "File s$i.txt not found in ~/se2001/assignment_1" >&2
 	fi
 done
