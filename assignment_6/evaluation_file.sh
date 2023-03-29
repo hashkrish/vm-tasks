@@ -10,7 +10,6 @@ if ! [ -x ~/se2001/assignment_6/script.sh ]; then
 #        exit 1
 fi
 
-
 city=( "chennai" "patna" "gaya" "kanyakumari" "pune" "shillong" )
 
 declare -A hash
