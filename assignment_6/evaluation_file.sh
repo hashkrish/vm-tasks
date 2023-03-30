@@ -67,8 +67,8 @@ for i in {1..10}; do
            a3="average";
        fi
     fi
-    ans1=${hash[${city[c]},${idx3}]}
-    ans2=$( ./script.sh ${city[c]} ${arg2[${idx2}]} $a3 || echo -1 ) 
+    ans1="${hash[${city[c]},${idx3}]}"
+    ans2="$( ./script.sh ${city[c]} ${arg2[${idx2}]} $a3 || echo -1 )"
 
     if [ `echo "${ans1} == ${ans2}" | bc` -eq 0 ]; then
         if [ $i -le 5 ]; then
