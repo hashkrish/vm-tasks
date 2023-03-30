@@ -54,7 +54,7 @@ p=0
 for i in {1..10}; do
     c=`shuf -i 0-$(( $num_cities-1 )) -n 1`
     idx2=`shuf -i 0-1 -n 1`
-    if [ ${idx2} -eq 0 ]; then
+    if [ "${idx2}" -eq 0 ]; then
        idx3=`shuf -i 0-1 -n 1`
        a3=${arg3[idx3]}
        #echo $a3
