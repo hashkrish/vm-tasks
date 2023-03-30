@@ -72,8 +72,9 @@ for i in {1..10}; do
 
     if [ `echo "${ans1} == ${ans2}" | bc` -eq 0 ]; then
         if [ $i -le 5 ]; then
-                echo "INPUT : ${city[c]} ${arg2[${idx2}]} $a3"
-                echo -e "Answer expected : $ans1 \t found : $ans2"
+                echo "INPUT  : ${city[c]} ${arg2[${idx2}]} $a3"
+                echo "OUTPUT : ${ans2}"
+                echo "ANSWER : ${ans1}"
                 echo -e "Test case $i failed.\n" >&2
         else
                 p=$(( p+1 ))
