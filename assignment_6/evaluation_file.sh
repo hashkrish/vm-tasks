@@ -60,7 +60,7 @@ for i in {1..10}; do
        #echo $a3
     else
        idx3=`shuf -i 2-3 -n 1`
-       if [ $idx3 -eq 2 ];
+       if [ "$idx3" -eq 2 ];
        then
            a3="mode";
        else
