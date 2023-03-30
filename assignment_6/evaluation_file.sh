@@ -46,7 +46,6 @@ hash["shillong",3]="23.17"
 
 arg2=("min" "max")
 
-declare -a arg3
 arg3=( "mode" "average" ) 
 
 num_cities=${#city[@]}
