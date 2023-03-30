@@ -44,9 +44,7 @@ hash["shillong",1]="11.33"
 hash["shillong",2]=23
 hash["shillong",3]="23.17"
 
-declare -a arg2
-arg2[0]="min"
-arg2[1]="max"
+arg2=("min" "max")
 
 declare -a arg3
 arg3=( "mode" "average" ) 
