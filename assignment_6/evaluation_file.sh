@@ -2,12 +2,12 @@
 
 if ! [ -f ~/se2001/assignment_6/script.sh ]; then
         echo "File $HOME/se2001/assignment_6/script.sh not found" >&2
-#        exit 1
+        exit 1
 fi
 
 if ! [ -x ~/se2001/assignment_6/script.sh ]; then
         echo "File $HOME/se2001/assignment_6/script.sh is not executable" >&2
-#        exit 1
+        exit 1
 fi
 
 city=( "chennai" "patna" "gaya" "kanyakumari" "pune" "shillong" )
