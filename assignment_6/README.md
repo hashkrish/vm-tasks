@@ -21,7 +21,7 @@ The output
 
 * A number
 
-    - Round of your answer to two decimal places.
+    - Round off your answer to two decimal places.
     - i.e if the actual answer is `15.666666` , your answer should be `15.67`
 
 Url of weather forecast website : [http://weather.local](http://weather.local)
