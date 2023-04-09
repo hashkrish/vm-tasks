@@ -70,6 +70,10 @@ for i in {1..10}; do
     ans1="${hash[${city[c]},${idx3}]}"
     ans2="$( ./script.sh ${city[c]} ${arg2[${idx2}]} $a3 || echo -1 )"
 
+    echo "$ans2" | grep "^[0-9]\+.\?[0-9]*$" > /dev/null    
+    if [ "$?" -eq 1 ]; then
+       exit 1
+    fi
     if [ `echo "${ans1} == ${ans2}" | bc` -eq 0 ]; then
         if [ $i -le 5 ]; then
                 echo "INPUT  : ${city[c]} ${arg2[${idx2}]} $a3"
