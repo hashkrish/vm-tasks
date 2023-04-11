@@ -107,3 +107,4 @@ do
         fi
     fi
 done
+rm $temp
