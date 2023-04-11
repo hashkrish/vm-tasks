@@ -1,6 +1,6 @@
 # Assignment 7
 
-The website has weather data about some cities in **Bharat** as a snapshot at particular instant in time. Please, explore the website to know what data each page consists.
+The website has weather data about some cities in **India** as a snapshot at particular instant in time. Please, explore the website to know what data each page consists.
 
 Write a bash script ` script.sh ` using `jq` to parse and filter json data from weather API website.
 
