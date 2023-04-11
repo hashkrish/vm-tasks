@@ -11,7 +11,7 @@ if ! [ -x ~/se2001/assignment_6/script.sh ]; then
 fi
 
 
-temp=`echo .temp_${USERNAME}`
+temp="/tmp/.temp_$(whoami)"
 city=( "chennai" "kolhapur" "amritsar" "pune" "srinagar" "surat" "cherrapunjee" "indore" "bikaner" "kalaburagi" "raipur" "bengaluru" "varanasi" "visakhapatnam" )
 cur=( "31.67" "32.75" "23.97" "31.09" "11.95" "28.94" "20.33" "30.09" "29.66" "33.96" "32.07" "29.94" "30.99" "31.78" )
 max=( "33.01" "32.75" "23.97" "31.09" "11.95" "28.94" "20.33" "30.09" "29.66" "33.96" "32.07" "30.73" "30.99" "31.78" )
