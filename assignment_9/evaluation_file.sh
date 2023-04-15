@@ -1,12 +1,12 @@
 #!/bin/bash
 
-if ! [ -f ~/se2001/assignment_6/script.sh ]; then
-    echo "File $HOME/se2001/assignment_6/script.sh not found" >&2
+if ! [ -f ~/se2001/assignment_9/script.sh ]; then
+    echo "File $HOME/se2001/assignment_9/script.sh not found" >&2
     exit 1
 fi
 
-if ! [ -x ~/se2001/assignment_6/script.sh ]; then
-    echo "File $HOME/se2001/assignment_6/script.sh is not executable" >&2
+if ! [ -x ~/se2001/assignment_9/script.sh ]; then
+    echo "File $HOME/se2001/assignment_9/script.sh is not executable" >&2
     exit 1
 fi
 
@@ -29,23 +29,24 @@ for i in {1..5}; do
     feature="${features[f]}"
 
     j="${ni[c]}"
-    k="$((j+1))"
     l="${fi[f]}"
-
-    x=($( sed "s/[ ]\+/ /g" "${in}" | sed -ne "$j,$k"p | cut -d " " -f "$l" ))
+    
+    x=$( sed -ne "$j"p "${in}" | sed "s/[ ]\+/ /g" | cut -d " " -f "$l" )
     js=`./script.sh "$class" "$feature"`
 
     if [ -z "$js" ]; then
         exit 1;
     fi
+    
+    ca="Iris-${class}"
+    fa=`echo ${feature} | sed "s/\(.*\)_\(.*\)/\u\1 \2"`
+    ce=`echo ${js} | jq ".class"`
+    fe=`echo ${js} | jq ".feature"`
+    me=`echo ${js} | jq ".mean"`
+    
+    mf=`echo "${me} == ${x}" | bc`
 
-    m=`echo ${js} | jq ".mean"`
-    s=`echo ${js} | jq ".std"`
-
-    mf=`echo "${m} == ${x[0]}" | bc`
-    sf=`echo "${s} == ${x[1]}" | bc`
-
-    if [ "$mf" -eq 0 ] && [ "$sf" -eq 0 ]; then
+    if [ "${mf}" -eq 0 ] && [ "${ca}" != "${ce}" ] && [ "${fa}" != "${fe}" ]; then
         exit 1
     fi
 done
