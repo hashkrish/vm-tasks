@@ -93,23 +93,4 @@ Sample Example
 Hint :
 
 * Use sql from command line to get the desired data.
-* You can use ` awk ` to produce json parsable data, as a library is readily given below.
-
-## Bonus AWK Library : ` t2pjlibee `
-
-* The library ` t2pjlibee ` ( ` t `ext ` to ` ` p `arsable ` j `son ` li `brary ` b `ee ) is given to you which makes it easy to convert a string suitable for ` jq ` processing.
-
-* It has an awk library file ` jlibee ` which defines a function ` jbee ` to convert a string to json data.
-
-* More information is available in ` README.md ` file in directory ` t2pjlibee `.
-
-* Find the library in this directory : ` /opt/t2pjlibee `
-
-Directory Structure :
-
-```tree
-/opt/
-  |_ t2pjlibee/
-        |- jlibee
-        |_ README.md
-```
+* Use  ` echo ` to format the output in ` jq ` parsable form.
