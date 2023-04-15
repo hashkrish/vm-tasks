@@ -1,6 +1,6 @@
 # Assignment 9
 
-Write a bash script ` script.sh ` to process iris data and return descriptive statistics of a particular column of the dataset.
+Consider 
 
 ## Iris flower data set
 
@@ -22,9 +22,9 @@ Write a bash script ` script.sh ` to process iris data and return descriptive st
 The dataset is stored in a table in sqlite3 database.
 * Database name : ` iris-flower.sqlite3 `
 * Table name : ` iris `
-* Table Schema : `CREATE TABLE iris (id INTEGER PRIMARY KEY AUTOINCREMENT, sepal_length REAL, sepal_width REAL, petal_length REAL, petal_width REAL, class VARCHAR(20));`
+* Table Schema : ` CREATE TABLE iris (id INTEGER PRIMARY KEY AUTOINCREMENT, sepal_length REAL, sepal_width REAL, petal_length REAL, petal_width REAL, class VARCHAR(20)); `
 
-* Find the database in this directory : `/opt/iris`
+* Find the database in this directory : ` /opt/iris `
 
 Directory Structure :
 
@@ -34,17 +34,7 @@ Directory Structure :
        |_ iris-flower.sqlite3
 ```
 
-Fetch the data in a form suitable for your need.
-
-Hint :
-
-* Use ` .help ` in ` sqlite3 ` interpreter to know how to get the data in desired form.
-* You can use ` heredoc ` feature of ` bash `
-* Use ` .quit ` to quit the ` sqlite3 ` interpreter
-
-After getting the data, compute the descriptive statistics using awk (can use any other command line utility in bash).
-
-The output must be `jq` parsable.
+Write a bash script ` script.sh ` to process iris data and return mean of a particular column of the dataset.
 
 The script will be invoked as follows:
 
@@ -69,16 +59,41 @@ Argument 2 :
     - ` petal_length `
     - ` petal_width `
 
+The output must be ` jq ` parsable.
+
 * ` jq ` parsable output :
 
-    ```json
-    {"mean":<mean>, "std":<std>}
+    ```
+    {"class": <class>, "feature": <feature_name>, "mean": <mean>}
+    ```
+    
+* ` <class> ` : This needs to be consistent with class names in sqlite3 database.
+* ` <feature_name> ` : Name of the feature.
+    - If feature name in sqlite3 database is ` sepal_length ` this value should be ` Sepal length `.
+* ` <mean> ` : Mean of rows of ` <feature_name> ` over ` <class> `
+
+Round off  ` <mean> ` up to 3 decimal places.
+
+
+
+
+Sample Example
+* Execution 
+
+    ```
+    ./script.sh setosa sepal_length
+    ```
+    
+* Output
+
+    ```
+    {"class":"Iris-setosa","feature":"Sepal length","mean":5.006}
     ```
 
-* ` <mean> ` : mean of rows of ` <feature_name> ` over ` <class> `
-* ` <std> ` : standard deviation of rows of ` <feature_name> ` over ` <class> `
+Hint :
 
-Round off all values up to 3 decimal places.
+* Use sql from command line to get the desired data.
+* You can use ` awk ` to produce json parsable data, as a library is readily given below.
 
 ## Bonus AWK Library : ` t2pjlibee `
 
