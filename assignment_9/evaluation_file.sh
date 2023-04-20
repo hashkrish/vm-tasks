@@ -13,7 +13,7 @@ fi
 classes=("setosa" "versicolor" "virginica")
 features=("sepal_length" "sepal_width" "petal_length" "petal_width")
 
-in="info.txt"
+in="/opt/se2001/assignment_9/info.txt"
 
 ni=(1 3 5)
 fi=(1 2 3 4)
@@ -39,7 +39,7 @@ for i in {1..5}; do
     fi
     
     ca="Iris-${class}"
-    fa=`echo ${feature} | sed "s/\(.*\)_\(.*\)/\u\1 \2"`
+    fa=`echo ${feature} | sed "s/\(.*\)_\(.*\)/\u\1 \2/"`
     ce=`echo ${js} | jq ".class"`
     fe=`echo ${js} | jq ".feature"`
     me=`echo ${js} | jq ".mean"`
