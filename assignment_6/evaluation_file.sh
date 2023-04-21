@@ -70,10 +70,16 @@ for i in {1..10}; do
     fi
     ans1="${hash[${city[c]},${idx3}]}"
     ./script.sh ${city[c]} ${arg2[${idx2}]} $a3 |& cat > "${temp}"
+    
+    if [ `wc -w < "${temp}"` -ne 1 ]; then
+        exit 1
+    fi
+    
     cat "${temp}" |  grep "[[:alpha:]]\|<\|>\||\|/\|°" > /dev/null
     if [ "$?" -eq 0 ]; then
         exit 1
     fi
+    
     ans2=`cat "${temp}"`
     echo "$ans2" | grep "^[0-9]\+.\?[0-9]*$" > /dev/null
     if [ "$?" -eq 1 ]; then
