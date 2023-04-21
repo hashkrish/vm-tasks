@@ -10,6 +10,7 @@ if ! [ -x ~/se2001/assignment_6/script.sh ]; then
         exit 1
 fi
 
+temp="/tmp/.temp_$(whoami)"
 city=( "chennai" "patna" "gaya" "kanyakumari" "pune" "shillong" )
 
 declare -A hash
@@ -68,11 +69,17 @@ for i in {1..10}; do
        fi
     fi
     ans1="${hash[${city[c]},${idx3}]}"
-    ans2="$( ./script.sh ${city[c]} ${arg2[${idx2}]} $a3 || echo -1 )"
+    ./script.sh ${city[c]} ${arg2[${idx2}]} $a3 |& cat > "${temp}"
+    cat "${temp}" |  grep "[[:alpha:]]\|<\|>\||\|/\|°" > /dev/null
+    if [ "$?" -eq 0 ]; then
+        exit 1
+    fi
+    ans2=`cat "${temp}"`
     echo "$ans2" | grep "^[0-9]\+.\?[0-9]*$" > /dev/null
     if [ "$?" -eq 1 ]; then
         exit 1
-    fi 
+    fi
+
     if [ `echo "${ans1} == ${ans2}" | bc` -eq 0 ]; then
         if [ $i -le 5 ]; then
                 echo "INPUT  : ${city[c]} ${arg2[${idx2}]} $a3"
@@ -85,7 +92,7 @@ for i in {1..10}; do
         exit 1
     fi
 done
-
+rm "${temp}"
 if [ $p -gt 0 ]; then
     echo -e "$p/5 private test cases failed\n" >&2
     exit 1
