@@ -71,7 +71,7 @@ for i in {1..10}; do
     ans1="${hash[${city[c]},${idx3}]}"
     ./script.sh ${city[c]} ${arg2[${idx2}]} $a3 |& cat > "${temp}"
     
-    if [ `wc -l < "${temp}"` -ne 1 ]; then
+    if [ `wc -w < "${temp}"` -ne 1 ]; then
         exit 1
     fi
     
