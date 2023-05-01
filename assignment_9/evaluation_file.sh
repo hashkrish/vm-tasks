@@ -46,7 +46,7 @@ for i in {1..5}; do
     
     mf=`echo "${me} == ${x}" | bc`
 
-    if [ "${mf}" -eq 0 ] && [ "${ca}" != "${ce}" ] && [ "${fa}" != "${fe}" ]; then
+    if [ "${mf}" -eq 0 ] || [ "${ca}" != "${ce}" ] || [ "${fa}" != "${fe}" ]; then
         exit 1
     fi
 done
