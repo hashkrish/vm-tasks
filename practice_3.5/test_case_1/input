@@ -1,0 +1,3 @@
+cmd="apropos"
+man $cmd > ans.txt
+echo -n "">ans.err

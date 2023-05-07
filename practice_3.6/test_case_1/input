@@ -1,0 +1,2 @@
+cmd="cat output"
+echo "hello world" > output
