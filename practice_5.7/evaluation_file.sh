@@ -6,7 +6,7 @@ out=("Prime" "Not Prime" "Not Prime" "Not Prime")
 
 for n in {0..3};
 do
-        oa="$(. script.sh ${inp[n]})"
+        oa="$(bash script.sh ${inp[n]})"
         oe="${out[n]}"
 
         if [ "${oa}" != "${oe}" ];
@@ -16,4 +16,3 @@ do
         fi
        (( i++ ))
 done
-

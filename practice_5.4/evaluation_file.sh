@@ -15,14 +15,18 @@ do
         chmod "${arr3[n]}" "${arr2[n]}"
     fi
 
-    oa="$(. script.sh ${arr2[n]})"
+    oa="$(. script.sh ${arr2[n]} 2> output)"
     es=$?
+    if [ -s output ];
+    then
+        oa=`cat output`
+    fi
     oe="${out[n]}"
-
     if [ "${oa}" != "${oe}" ] || [ "$es" != "${exs[n]}" ];
     then
         echo "Test case ${i} failed"
         exit 1
     fi
     (( i++ ))
+    rm output
 done

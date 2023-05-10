@@ -7,16 +7,18 @@ ans=(2 247 "NOT INTEGERS" "NOT INTEGERS")
 
 for n in {0..3};
 do
-        oa1="$(. script.sh ${arr1[n]} ${arr2[n]} 2> stderr)"
+        arg1="${arr1[n]}"
+        arg2="${arr2[n]}"
+        oa="$(. script.sh $arg1 $arg2 2> stderr)"
         oe="${ans[n]}"
-        
-        if [ $i -ge 2 ];
+
+        if [ $n -ge 2 ];
         then 
-            oa1=`cat stderr`
+            oa=`cat stderr`
             rm stderr
         fi
 
-        if [ "${oa1}" != "${oe}" ];
+        if [ "${oa}" != "${oe}" ];
         then
                 echo "Test case ${i} failed"
                 exit 1

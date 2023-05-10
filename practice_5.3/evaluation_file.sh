@@ -7,10 +7,10 @@ ans=("ss2" 90 23 "asecond" "1secondPlease")
 
 for n in {0..3};
 do
-        oa1="$(. script.sh ${arr1[n]} ${arr2[n]})"
+        oa="$(. script.sh ${arr1[n]} ${arr2[n]})"
         oe="${ans[n]}"
 
-        if [ "${oa1}" != "${oe}" ];
+        if [ "${oa}" != "${oe}" ];
         then
                 echo "Test case ${i} failed"
                 exit 1

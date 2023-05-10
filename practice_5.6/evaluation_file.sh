@@ -1,13 +1,11 @@
 #!/bin/bash
 
 test_dir="/opt/se2001/practice_5.6"
-
 inp=(8 5 3)
 i=0
-
 for dir in "${test_dir}/test_case_"{1..3};
 do
-	. script.sh ${inp[i]} > out.txt
+	bash script.sh ${inp[i]} > out.txt #| tee out.txt 
 
 	diff out.txt ${dir}/output &> /dev/null
         
