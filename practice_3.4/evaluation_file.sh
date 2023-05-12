@@ -1,6 +1,8 @@
 test_dir="/opt/se2001/practice_3.4"
 
-. $test_dir/input
+eid1="FN04M456"
+eid2="SD12C729"
+eid3="WO08W003"
 
 . script.sh
 

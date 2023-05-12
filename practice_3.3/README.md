@@ -6,6 +6,9 @@ Find the file extension and print it.
 
 Write your answer in bash script ` script.sh `.
 
+Note:
+- The variable will be made available during evaluation.
+
 Example,
   - If the filename is ` abc.txt `, print ` txt `.
   - If the filename is ` script.sh ` print ` sh `.
