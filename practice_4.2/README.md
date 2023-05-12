@@ -1,4 +1,4 @@
-# Week 4 Problem 1
+# Week 4 Problem 2
 
 Write a bash script ` script.sh ` to perform the following task, redirect your output to ` out.txt `.
 
