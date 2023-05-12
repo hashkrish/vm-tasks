@@ -6,3 +6,5 @@ Each classroom has 40 students. There is a directory for every classroom. All th
 Suddenly the school experienced 40% drop in first and sixth standard so they reduced the number of students in each class room to 32. 
 
 Your task is to remove the extra files in the respective directories, i.e. named from 33 to 40.
+
+Note : Run ` synchro init ` to initialize the directory as you did for ` practice_2.3 `.
