@@ -6,6 +6,6 @@ Hint: Use ` file `. Refer manual of ` file ` or ` file --help `.
 
 Remember that:
 - Initially you may not find any file. 
-- The files are automatically created when you run ` synchro preval `.
+- The files are automatically created when you run ` synchro eval `.
 - The same strategy is followed for most of the practice problems.
 - You can create dummy files to check for yourself if your script works.
