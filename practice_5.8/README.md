@@ -40,3 +40,6 @@ done < dfOutput.txt
 ```
 
 Use ${var:0:-1} to remove the last character of string var.
+
+Note:
+- The file ` dfOutput.txt ` will be made available during evaluation.

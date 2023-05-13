@@ -13,4 +13,3 @@ then
     echo "Test case $(( i+1 )) failed"
     exit 1
 fi
-

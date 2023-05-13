@@ -6,7 +6,8 @@ Write a bash script named ` script.sh ` that accepts a file path as an argument 
 - Prints "NOT READABLE" on STDERR and return with error code 2 if the file is not readable by the current user.
 - Prints "WOO HOO" if the file exists and is readable too.
 
-Note: Use the below if elif conditional statement if needed
+Note: 
+- Use the below if elif conditional statement if needed
 
 ```bash
 if condition; then
@@ -20,3 +21,5 @@ else
 	...
 fi
 ```
+
+- The files will be created during ` synchro eval `.

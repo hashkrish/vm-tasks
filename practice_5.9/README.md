@@ -14,3 +14,6 @@ For example, if there is no filesystem with usage >95% and also none in the rang
 85-95
 (names of filesystem one in each line with usage between 85 to 95%)
 ```
+
+Note:
+- ` dfOutput.txt ` will be made available during evaluation.
