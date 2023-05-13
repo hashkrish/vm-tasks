@@ -17,3 +17,4 @@ Write a bash script ` script.sh ` which satisfies the statement below:
 
 - ` out.txt ` contains all the lines that does not contain the word "we" in it.
 
+- Run ` synchro init ` to get started.

@@ -9,3 +9,6 @@ Consider a file named ` lsinfo.txt ` in your current working directory that cont
    3.  Other users have read permission only
 
 Write your answer as a bash script ` script.sh `. Redirect your output to file ` out.txt `.
+
+Note:
+- Run ` synchro init ` before running ` synchro eval `.

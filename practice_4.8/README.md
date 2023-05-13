@@ -19,3 +19,6 @@ Ghana, Accra; Africa
 Use the cut command to extract the continents (including the one white space in the beginning) of the first 5 lines of file.txt and store it in another file named continent.txt 
 
 Write your answer as a script with name ` script.sh `.
+
+Note:
+- Run ` synchro init ` to begin.

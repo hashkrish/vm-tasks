@@ -6,4 +6,6 @@ Consider a file named ` lsinfo.txt ` in your current working directory that cont
 
 Use grep/egrep to print the long-listing of all files excluding directories in ` lsinfo.txt ` whose last modified date is in January.
 
-Note: There are many special kind of files in linux for example for socket files the first character in permission string is 's' like it is 'd' for directories.
+Note: 
+- There are many special kind of files in linux for example for socket files the first character in permission string is 's' like it is 'd' for directories.
+- Run ` synchro init ` to get ` lsinfo.txt ` in your ` pwd `.

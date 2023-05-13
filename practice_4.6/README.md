@@ -14,3 +14,6 @@ we were all going direct to Heaven, we were all going direct the other way
 ```
 
 Write bash script ` script.sh ` using grep to find all the lines that end with the letter ` s ` (comma and space at end should be excluded), in the above file. Redirect your output to file ` out.txt `.
+
+Note:
+- Run ` synchro init ` to begin.
