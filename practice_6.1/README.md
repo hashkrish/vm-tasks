@@ -15,3 +15,6 @@ q [exit-code]
 Q [exit-code]
       Immediately quit the sed script without processing any more
       input.  This is a GNU extension.
+
+Note:
+- The files will be made available during evaluation.

@@ -23,7 +23,3 @@ do
 
 	(( i++ ))
 done
-
-rm out.txt
-rm print.py
-

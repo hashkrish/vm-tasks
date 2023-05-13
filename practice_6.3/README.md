@@ -5,3 +5,6 @@ The command ` cut -d " " -f 5 lsoutput ` is executed to extract the total size o
 Write a script ` script.sh ` to perform the task.
 
 Hint: Use the -i option in sed to do the modification in the file.
+
+Note:
+- ` lsoutput ` will be created during evaluation.
