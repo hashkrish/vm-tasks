@@ -6,4 +6,7 @@ Write an awk script ` file.awk ` to calculate class average marks of each subjec
 - The second line of output represents the class average of Physics.
 - The third line of output represents the class average of Chemistry.
 
-The marks are given in the comma separated file ` marks.csv ` 
+The marks are given in the comma separated file ` marks.csv `.
+
+Note:
+- ` marks.csv ` will be available during evaluation.
