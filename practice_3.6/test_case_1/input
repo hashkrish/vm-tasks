@@ -1,2 +1,1 @@
-cmd="cat output"
-echo "hello world" > output
+cat output

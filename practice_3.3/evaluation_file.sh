@@ -1,20 +1,15 @@
 #!/bin/bash
 
-test_dir="/opt/se2001/practice_3.3"
-
-parent_dir="/home/$(whoami)/se2001/practice_3.3"
+test_dir="/opt/se2001/$(basename $(pwd))"
 
 i=1
-for dir in "${test_dir}/test_case_"{1..2};
-do
-	. ${dir}/input
-	
-	oa=$(. script.sh)
-	oe=$( cat ${dir}/output )
-	if [ "${oa}" != "${oe}" ];
-	then
+for dir in $(ls $test_dir/ | grep "test_case" | sort); do
+	read filename <"${test_dir}/${dir}"/input
+	oa=$(filename="$filename" bash script.sh)
+	read oe <"${test_dir}/${dir}"/output
+	if [ "${oa}" != "${oe}" ]; then
 		echo "Test case ${i} failed"
 		exit 1
 	fi
-	(( i++ ))
+	((i++))
 done

@@ -1,12 +1,12 @@
 #!/bin/bash
 
-test_dir="/opt/se2001/practice_3.5"
+test_dir="/opt/se2001/$(basename $(pwd))"
 
-for dir in "${test_dir}/test_case_"{1,2};
-do
-    . $dir/input
-    . script.sh
-    diff ans.txt man_$cmd.txt &> /dev/null || exit 1
-    diff ans.err man_$cmd.err &> /dev/null || exit 1
-    (( i++ ))
+for dir in $(ls $test_dir/ | grep "test_case" | sort); do
+	read cmd <$test_dir/$dir/input
+	cmd="$cmd" bash script.sh
+	cmd="$cmd" bash $test_dir/$dir/output
+	diff ans.txt man_$cmd.txt &>/dev/null || exit 1
+	diff ans.err man_$cmd.err &>/dev/null || exit 1
+	((i++))
 done

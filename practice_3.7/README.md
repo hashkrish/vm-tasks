@@ -8,6 +8,6 @@ Your script will be used in a loop that will be run for each file.
 
 The value of ` ct ` should be initialized to 0, at the beginning, and the number of words stored in the variable ` words ` is to be added for your command.
 
-Achieve this task in just one line.
+Print the value of the variable ` ct ` in the end.
 
 Hint: Write a Bash command in ` script.sh ` that is equivalent to pseudocode "ct=ct+words", where ` ct ` and ` words ` are variables
