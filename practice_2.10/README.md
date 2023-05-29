@@ -1,10 +1,11 @@
 # Week 2 Problem 10
 
-The array ` colors ` contains the name of the colors. 
+The string ` colors ` contains the name of the colors.
+Convert it to array of colors.
 
 Your task is to write a bash script ` script.sh ` to remove all vowels present in the array and display them.
 
-Example: ` colors=(violet indigo blue green yellow orange red) `
+Example: ` colors="violet indigo blue green yellow orange red" `
 
 **Output**
 
