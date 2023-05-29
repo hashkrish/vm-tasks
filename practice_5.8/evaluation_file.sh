@@ -1,15 +1,19 @@
 #!/bin/bash
 
-test_dir="/opt/se2001/practice_5.8/test_case_1"
+test_dir="/opt/se2001/$(basename $(pwd))"
 
-cp $test_dir/input dfOutput.txt
+i=1
+for dir in $(ls $test_dir/ | grep "test_case" | sort); do
 
-bash script.sh > out.txt 
+	cp ${test_dir}/${dir}/input dfOutput.txt
 
-diff out.txt ${test_dir}/output &> /dev/null
-        
-if [ "$?" -eq 1 ];
-then
-    echo "Test case $(( i+1 )) failed"
-    exit 1
-fi
+	bash script.sh >out.txt
+
+	diff out.txt ${test_dir}/${dir}/output &>/dev/null
+
+	if [ "$?" -eq 1 ]; then
+		echo "Test case $((i + 1)) failed"
+		exit 1
+	fi
+	((i++))
+done
