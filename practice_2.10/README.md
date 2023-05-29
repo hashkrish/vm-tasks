@@ -7,6 +7,12 @@ Your task is to write a bash script ` script.sh ` to remove all vowels present i
 
 Example: ` colors="violet indigo blue green yellow orange red" `
 
+Use the snippet below to convert a space separated string to an array.
+
+```bash
+arr=($str)
+```
+
 **Output**
 
 ```
