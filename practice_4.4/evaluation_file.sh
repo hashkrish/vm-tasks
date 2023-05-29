@@ -1,9 +1,8 @@
 #!/bin/bash
 
-rm out.txt 2> /dev/null
+rm out.txt 2>/dev/null
 
-. script.sh
+bash script.sh
 
-dir="/opt/se2001/practice_4.4"
-
-diff $dir/output out.txt &> /dev/null
+dir="/opt/se2001/$(basename $(pwd))"
+diff $dir/output out.txt &>/dev/null

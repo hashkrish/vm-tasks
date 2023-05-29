@@ -1,7 +1,7 @@
 #!/bin/bash
 
-n=$(. script.sh)
+n=$(bash script.sh)
 
 if [ $n -ne 2 ]; then
-   exit 1
+	exit 1
 fi

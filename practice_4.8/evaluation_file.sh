@@ -1,8 +1,8 @@
 #!/bin/bash
 
-rm continent.txt 2> /dev/null
+rm continent.txt 2>/dev/null
 
-. script.sh
+bash script.sh
 
-dir="/opt/se2001/practice_4.8"
-diff $dir/output  continent.txt &> /dev/null
+dir="/opt/se2001/$(basename $(pwd))"
+diff $dir/output continent.txt &>/dev/null
