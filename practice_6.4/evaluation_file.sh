@@ -1,25 +1,23 @@
 #!/bin/bash
 
-test_dir="/opt/se2001/practice_6.4"
+test_dir="/opt/se2001/$(basename $(pwd))"
 
 i=0
 
-for dir in "${test_dir}/test_case_"{1..2};
-do
-        > print.py
-        while read line; do
-          echo $line 
-        done < $dir/input > print.py
-        
-        sed -f script.sed print.py > out.txt
+for dir in $(ls "$test_dir" | grep "test_case" | sort); do
+	>print.py
+	while read line; do
+		echo $line
+	done <$test_dir/$dir/input >print.py
 
-        diff out.txt $dir/output &> /dev/null
+	sed -f script.sed print.py >out.txt
 
-        if [ $? -eq 1 ];
-        then
-                echo "Test case $(( i+1 )) failed"
-                exit 1
-        fi
+	diff out.txt $test_dir/$dir/output &>/dev/null
 
-	(( i++ ))
+	if [ $? -eq 1 ]; then
+		echo "Test case $((i + 1)) failed"
+		exit 1
+	fi
+
+	((i++))
 done
