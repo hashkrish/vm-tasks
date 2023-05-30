@@ -1,22 +1,20 @@
 #!/bin/bash
 
-test_dir="/opt/se2001/practice_7.2"
+test_dir="/opt/se2001/$(basename $(pwd))"
 
 i=0
 
-for dir in "${test_dir}/test_case_*";
-do
-       
-        cat $dir/input  > marks.csv
+for dir in $(ls "$test_dir" | grep "test_case" | sort); do
 
-        awk -f file.awk marks.csv > out.txt
+	cat $test_dir/$dir/input >marks.csv
 
-        diff out.txt $dir/output &> /dev/null
+	awk -f file.awk marks.csv >out.txt
 
-        if [ $? -eq 1 ];
-        then
-                echo "Test case $(( i+1 )) failed"
-                exit 1
-        fi
-	i=$(( i+1 ))
+	diff out.txt $test_dir/$dir/output &>/dev/null
+
+	if [ $? -eq 1 ]; then
+		echo "Test case $((i + 1)) failed"
+		exit 1
+	fi
+	((i + 1))
 done
