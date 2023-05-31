@@ -6,7 +6,7 @@ The file  ` file.txt ` contains three fields in a line in the order
 - Capital
 - Continent
 
-The first two fiels country and capital are separated by a comma and the last two fields capital and continent are separated by a semicolon.
+The first two fields country and capital are separated by a comma and the last two fields capital and continent are separated by a semicolon.
 
 The command below prints the file.
 
