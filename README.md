@@ -23,6 +23,9 @@ Submission Successful.
 
 ## FAQ
 
+- I don't have the directory `se2001` in my home directory. What should I do?
+  - Create the directory with `mkdir ~/se2001`
+  
 - How to reset my password?
   - Execute the command `passwd` and provide your current password and new password as per the prompt.
   - The password typed will not be visible during and after the input.
