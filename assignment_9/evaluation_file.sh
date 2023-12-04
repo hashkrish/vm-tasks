@@ -30,21 +30,21 @@ for i in {1..5}; do
 
     j="${ni[c]}"
     l="${fi[f]}"
-    
+
     x=$( sed -ne "$j"p "${in}" | sed "s/[ ]\+/ /g" | cut -d " " -f "$l" )
-    js=`./script.sh "$class" "$feature"`
+    js="$(./script.sh "$class" "$feature")"
 
     if [ -z "$js" ]; then
         exit 1;
     fi
-    
+
     ca="Iris-${class}"
-    fa=`echo ${feature} | sed "s/\(.*\)_\(.*\)/\u\1 \2/"`
-    ce=`echo ${js} | jq ".class"`
-    fe=`echo ${js} | jq ".feature"`
-    me=`echo ${js} | jq ".mean"`
-    
-    mf=`echo "${me} == ${x}" | bc`
+    fa="$(echo "${feature}" | sed "s/\(.*\)_\(.*\)/\u\1 \2/")"
+    ce="$(echo "${js}" | jq -r ".class")"
+    fe="$(echo "${js}" | jq -r ".feature")"
+    me="$(echo "${js}" | jq -r ".mean")"
+
+    mf="$(echo "${me} == ${x}" | bc)"
 
     if [ "${mf}" -eq 0 ] || [ "${ca}" != "${ce}" ] || [ "${fa}" != "${fe}" ]; then
         exit 1
