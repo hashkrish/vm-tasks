@@ -1,10 +1,10 @@
 0-50
 /run
+/dev/shm
 /run/lock
 /boot
 /boot/efi
 /run/user/1000
-/dev/shm
 85-95
 /
 >95
