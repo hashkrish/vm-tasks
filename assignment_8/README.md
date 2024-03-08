@@ -8,4 +8,4 @@ Your tasks are
 - Create a branch `<your_roll_number>` from `master`
 - Replace the example fibonacci input by your roll number (final three digits without preceded zeroes) in the file README.md and do a commit with message `update example`
 - Cherry pick the commit `693dca7f5dae2b72a960018ba3df5b8819963b37` from the branch `remove-todo` and apply it your branch
-- Merge the branch `<your_roll_number>` to `main` locally.
+- Merge the branch `<your_roll_number>` to `master` locally.
