@@ -1,25 +1,19 @@
 # Week 5 Problem 4
 
-Write a bash script named ` script.sh ` that accepts a file path as an argument and checks if that exists and is readable by the current user and prints the output as below.
+The shell variable ` logfile ` contains the absolute path to some file. 
 
-- Prints "DOES NOT EXIST" on STDERR and return with error code 1 if the file does not exist at the given path.
-- Prints "NOT READABLE" on STDERR and return with error code 2 if the file is not readable by the current user.
-- Prints "WOO HOO" if the file exists and is readable too.
+Write a script ` script.sh ` which performs the following task. 
 
-Note: 
-- Use the below if elif conditional statement if needed
+The task is to print two lines, where first line is the filename alone and the second line is the path of the directory in which the file ` logfile ` is located (print the path without the trail slash ` / `).
 
-```bash
-if condition; then
-	...
-	...
-elif condition; then
-	...
-	...
-else
-	...
-	...
-fi
+Note:
+- Variables are created when you run ` synchro eval `.
+
+Example shell variable: ` logfile=/home/student78/daily.log `
+
+**Output**
+
 ```
-
-- The files will be created during ` synchro eval `.
+daily.log
+/home/student78
+```

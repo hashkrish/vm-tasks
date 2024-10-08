@@ -1,19 +1,14 @@
 # Week 5 Problem 9
 
-In Problem 8, modify the output of your script as below.
+The employee ID of a certain company is in the following format: ` DDYYPXXX ` where
 
-- Print the range string only if there is a filesystem in that range.
+- ` DD ` stands for department; ex: FN for Finance, SD for Software Development
+- ` YY ` stands for work experience, which is a two digit number.
+- ` P ` stands for position, which is a letter; e.g. M for Manager, etc.
+- ` XXX ` stands for ID number. Which is a three digit number.
 
-For example, if there is no filesystem with usage >95% and also none in the range 75-85, and the rest all range has at least one filesystem with usage in that range than your output should be
+Given three Employee IDs, extract just the Department and the ID Number of these employees. Redirect all the output to the file named ` output.txt `.
 
-```pseudo
-0-50
-(names of filesystem one in each line with usage between 0 to 50%)
-50-75
-(names of filesystem one in each line with usage between 50 to 75%)
-85-95
-(names of filesystem one in each line with usage between 85 to 95%)
-```
+The names of the variables which stores the employee Ids are shell variables with names ` eid1 `, ` eid2 ` and ` eid3 `. Redirect your output in the same sequence as ` sort -n ` order of the shell variable names.
 
-Note:
-- ` dfOutput.txt ` will be made available during evaluation.
+Write your code in file ` script.sh `.

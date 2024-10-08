@@ -1,12 +1,15 @@
 # Week 7 Problem 2
 
-Write an awk script ` file.awk ` to calculate class average marks of each subject and print each subject average in a new line. 
+Write a bash script named ` script.sh ` that takes two arguments, checks if both the arguments are positive integers then prints their sum; else prints "NOT INTEGERS" to STDERR and exits with exit code 1.
 
-- The first line of output represents the class average of Mathematics.
-- The second line of output represents the class average of Physics.
-- The third line of output represents the class average of Chemistry.
+Note: Use the below if else conditional statement if needed.
 
-The marks are given in the comma separated file ` marks.csv `.
-
-Note:
-- ` marks.csv ` will be available during evaluation.
+```bash
+if condition; then
+	...
+	...
+else
+	...
+	...
+fi
+```

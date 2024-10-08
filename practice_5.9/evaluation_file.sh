@@ -1,17 +1,5 @@
-#!/bin/bash
-
 test_dir="/opt/se2001/$(basename $(pwd))"
-i=1
-for dir in $(ls $test_dir/ | grep "test_case" | sort); do
-	cp $test_dir/${dir}/input dfOutput.txt
 
-	bash script.sh >out.txt
+eid1="FN04M456" eid2="SD12C729" eid3="WO08W003" bash script.sh
 
-	diff out.txt ${test_dir}/${dir}/output &>/dev/null
-
-	if [ "$?" -eq 1 ]; then
-		echo "Test case $i failed"
-		exit 1
-	fi
-	((i++))
-done
+diff $test_dir/ans.txt output.txt &>/dev/null

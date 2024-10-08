@@ -1,18 +1,16 @@
 #!/bin/bash
 
+test_dir="/opt/se2001/$(basename $(pwd))"
+
 i=1
-inp=(113 27 4 1)
-out=("Prime" "Not Prime" "Not Prime" "Not Prime")
-
-for n in {0..3};
-do
-        oa="$(bash script.sh ${inp[n]})"
-        oe="${out[n]}"
-
-        if [ "${oa}" != "${oe}" ];
-        then
-                echo "Test case ${i} failed"
-                exit 1
-        fi
-       (( i++ ))
+for dir in "${test_dir}/test_case_"{1..4}; do
+	read colors <$dir/input
+	export colors
+	oa=$(bash script.sh)
+	read oe <${dir}/output
+	if [ "${oa}" != "${oe}" ]; then
+		echo "Test case ${i} failed"
+		exit 1
+	fi
+	((i++))
 done

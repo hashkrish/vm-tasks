@@ -1,23 +1,16 @@
 #!/bin/bash
 
-test_dir="/opt/se2001/$(basename $(pwd))"
+i_=1
+inp=(37907 45456 123)
+out=(70973 65454 321)
 
-i=0
+for n_ in {0..2}; do
+	oa="$(bash script.sh ${inp[n_]})"
+	oe="${out[n_]}"
 
-for dir in $(ls "$test_dir" | grep "test_case" | sort); do
-	while read -r line; do
-		[[ $line == "" ]] && break
-		echo $line
-	done <$test_dir/$dir/input >file
-
-	awk -f script.awk file >out.txt
-
-	diff out.txt $test_dir/$dir/output &>/dev/null
-
-	if [ $? -eq 1 ]; then
-		echo "Test case $((i + 1)) failed"
+	if [ "${oa}" != "${oe}" ]; then
+		echo "Test case ${i_} failed"
 		exit 1
 	fi
-
-	((i++))
+	((i_++))
 done

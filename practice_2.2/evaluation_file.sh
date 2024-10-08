@@ -1,7 +1,19 @@
 #!/bin/bash
 
-dir="$(pwd)"
-x=$(ls -d "${dir}/"* | sed -e "s/.*\///g" | sort -n)
-eo="/opt/se2001/$(basename $dir)/expected_output.txt"
-y=$(cat ${eo})
-echo $x | grep -q "$y" && exit 0 || exit 1
+parent_dir="$(pwd)"
+test_dir="/opt/se2001/$(basename $parent_dir)"
+i=1
+for dir in "${test_dir}/test_case_"{1..3};
+do
+	cat ${dir}/input > ${parent_dir}/somefile
+	
+	oa=$(./script.sh)
+	oe=$( cat ${dir}/output )
+	if [ "${oa}" != "${oe}" ];
+	then
+		echo "Test case ${i} failed"
+		exit 1
+	fi
+	(( i++ ))
+done
+	

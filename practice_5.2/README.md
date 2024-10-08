@@ -1,15 +1,9 @@
 # Week 5 Problem 2
 
-Write a bash script named ` script.sh ` that takes two arguments, checks if both the arguments are positive integers then prints their sum; else prints "NOT INTEGERS" to STDERR and exits with exit code 1.
+A school teaches from first to twelfth standard, each standard has 5 sections named as ` A ` to ` E `. The class room number is represented as standard (as number) followed by the section, for example ` 12E `, ` 3C `, etc..
+Each classroom has 40 students. 
 
-Note: Use the below if else conditional statement if needed.
+There is a directory for every classroom in ` ~/se2001/practice_5.2 `.
 
-```bash
-if condition; then
-	...
-	...
-else
-	...
-	...
-fi
-```
+Write a Bash command to create a file for each student, name the files from 1 to 40 in every directory.
+
