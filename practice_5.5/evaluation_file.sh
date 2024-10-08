@@ -1,16 +1,16 @@
 #!/bin/bash
 
-i_=1
-inp=(37907 45456 123)
-out=(70973 65454 321)
+test_dir="/opt/se2001/$(basename $(pwd))"
 
-for n_ in {0..2}; do
-	oa="$(bash script.sh ${inp[n_]})"
-	oe="${out[n_]}"
-
+i=1
+for dir in "${test_dir}/test_case_"{1..3}; do
+	read TOTALCOST <$dir/input
+	export TOTALCOST
+	oa=$(bash script.sh)
+	read oe <${dir}/output
 	if [ "${oa}" != "${oe}" ]; then
-		echo "Test case ${i_} failed"
+		echo "Test case ${i} failed"
 		exit 1
 	fi
-	((i_++))
+	((i++))
 done

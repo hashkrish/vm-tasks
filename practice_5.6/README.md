@@ -1,22 +1,11 @@
 # Week 5 Problem 6
 
-Write a bash script in the file ` script.sh ` that accepts an integer argument say ` n ` and prints the below pattern for ` n ` lines.
+Write a bash script ` script.sh ` to display only the filename without extension, whose absolute path is stored in a shell variable named ` file `. The extension should not include the dot ` . `.
 
-For example,
-In the below sample, the value of `n` is 5
-```
-*
-**
-***
-****
-*****
-```
+Example: ` file=/home/student56/tmp/artic.jpg `
 
-In the below sample, the value of `n` is 4.
+**Output**
 
 ```
-*
-**
-***
-****
+artic
 ```

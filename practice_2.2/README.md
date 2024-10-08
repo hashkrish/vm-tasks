@@ -1,7 +1,11 @@
 # Week 2 Problem 2
 
-A school teaches from first to twelfth standard, each standard has 5 sections named as ` A ` to ` E `. 
+Write a bash script ` script.sh ` which prints the mime type of ` somefile ` located in ` ~/se2001/practice_2.2 `.
 
-The class room number is represented as standard (as number) followed by the section, for example ` 12E `, ` 3C `, etc..
+Hint: Use ` file `. Refer manual of ` file ` or ` file --help `.
 
-Your task is to create a directory for every classroom in directory ` ~/se2001/practice_2.2 `.
+Remember that:
+- Initially you may not find any file. 
+- The files are automatically created when you run ` synchro eval `.
+- The same strategy is followed for most of the practice problems.
+- You can create dummy files to check for yourself if your script works.

@@ -1,20 +1,24 @@
 #!/bin/bash
 
-test_dir="/opt/se2001/$(basename $(pwd))"
+i=1
+arr1=(1 123 1 "a")
+arr2=(1 124 "afewf" "b")
+ans=(2 247 "NOT INTEGERS" "NOT INTEGERS")
 
-i=0
+for n in {0..3}; do
+	arg1="${arr1[n]}"
+	arg2="${arr2[n]}"
+	oa="$(bash script.sh $arg1 $arg2 2>stderr)"
+	oe="${ans[n]}"
 
-for dir in $(ls "$test_dir" | grep "test_case" | sort); do
+	if [ $n -ge 2 ]; then
+		oa=$(cat stderr)
+		rm stderr
+	fi
 
-	cat $test_dir/$dir/input >marks.csv
-
-	awk -f file.awk marks.csv >out.txt
-
-	diff out.txt $test_dir/$dir/output &>/dev/null
-
-	if [ $? -eq 1 ]; then
-		echo "Test case $((i + 1)) failed"
+	if [ "${oa}" != "${oe}" ]; then
+		echo "Test case ${i} failed"
 		exit 1
 	fi
-	((i + 1))
+	((i++))
 done
