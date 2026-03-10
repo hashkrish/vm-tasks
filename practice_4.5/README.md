@@ -1,6 +1,6 @@
 # Week 4 Problem 5
 
-The file  ` file.txt ` contains three fields in each line in the order
+The file  `file.txt` contains three fields in each line in the order
 
 - Country
 - Capital
@@ -26,5 +26,4 @@ Ghana, Accra; Africa
 
 Write a bash script ` script.sh ` which uses ` cut ` to redirect only the countries and its capitals of ` file.txt ` in the format ` Country, Capital ` (Eg. ` India, New Delhi `) to file named ` out.txt `.
 
-Note:
-- Run `synchro init` to get `file.txt`.
+Note: Run `synchro init` to get the file `file.txt`.
