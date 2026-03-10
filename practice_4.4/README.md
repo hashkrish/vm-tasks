@@ -10,11 +10,9 @@ it was the epoch of belief, it was the epoch of incredulity,
 it was the season of Light, it was the season of Darkness,
 it was the spring of hope, it was the winter of despair,
 we had everything before us, we had nothing before us,
-we were all going direct to Heaven, we were all going direct the other way
+We were all going direct to Heaven, we were all going direct the other way
 ```
 
-Write a bash script ` script.sh ` which satisfies the statement below:
-
-- ` out.txt ` contains all the lines that does not contain the word "we" in it.
+Write a bash script ` script.sh ` which creates a file named ` out.txt ` which contains all lines that do not contain the word "we" (case-insensitive) in it.
 
 - Run ` synchro init ` to get started.
