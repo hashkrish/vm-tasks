@@ -1,8 +1,16 @@
 # Week 5 Problem 10
 
-Write a bash script ` script.sh ` to redirect the **manual** entry (.i.e. output of man page) for the command which is specified as value of the shell variable named ` cmd ` to a text file ` man_commandValue.txt `, where ` commandValue ` is the value in variable ` cmd ` (example: if the variable ` cmd ` has value ` ls `, then redirect the out of `man ls` to the file named ` man_ls.txt ` ).
+The shell variable `cmd` holds the command name.
 
-If there is an error in getting the man page of command in variable ` cmd `, then redirect the standard error to ` man_commandValue.err ` and execute the help command for the command in variable ` cmd ` and redirect the output to the file ` man_commandValue.txt `, where ` commandValue ` is the value in variable ` cmd `.
+**Task** -
 
-Hint: use operator && or || for executing help command based on exit status of first command.
+Write a bash script `script.sh` to redirect the **manual** entry (i.e. output of man page) of the command in `cmd` to a text file `man_commandValue.txt`, where `commandValue` is the value of `cmd`. Example: if `cmd` has value `ls`, then redirect the output of `man ls` to the file `named man_ls.txt`.
 
+If there is an error in getting the man page of the command in `cmd`, then redirect the standard error to `man_commandValue.err`. Additonally, execute the help command instead and redirect the output to the file `man_commandValue.txt`.
+
+**Note** -
+
+- The variable will be made available during evaluation.
+- Run `export cmd="ls"` to create the variable for testing before evaluation.
+
+**Hint** - Use operator && or || for executing help command based on exit status of first command.
