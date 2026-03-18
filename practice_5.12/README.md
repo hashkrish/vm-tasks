@@ -1,13 +1,12 @@
 # Week 5 Problem 12
 
-You are writing a Bash Script and in one of the task, you have to count the number of occurrences of some word in several files and finally the count should be in the variable ` ct `. 
+**Task** -
 
-Write a Bash script ` script.sh ` that can be sourced in a loop to count the number of occurrences in all files, supposing that word count is stored in the variable named ` words `. 
+Write a Bash script `script.sh` that will be sourced in a loop over several files. In each iteration, the word count for that file is stored in `words`. Accumulate the total count in `ct` and print it at the end.
 
-Your script will be used in a loop that will be run for each file.
+**Note** -
 
-The value of ` ct ` should be initialized to 0, at the beginning, and the number of words stored in the variable ` words ` is to be added for your command.
+- The variable `words` will be made available during evaluation.
+- Run `export words=5` to create the variable for testing before evaluation.
 
-Print the value of the variable ` ct ` in the end.
-
-Hint: Write a Bash command in ` script.sh ` that is equivalent to pseudocode "ct=ct+words", where ` ct ` and ` words ` are variables
+**Hint** - Use arithmetic expansion to implement `ct = ct + words`.

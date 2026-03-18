@@ -1,9 +1,7 @@
 # Week 5 Problem 2
 
-A school teaches from first to twelfth standard, each standard has 5 sections named as ` A ` to ` E `. The class room number is represented as standard (as number) followed by the section, for example ` 12E `, ` 3C `, etc..
-Each classroom has 40 students. 
+A school has grades from `1` to `12`, each with 5 sections `A` to `E`. Classroom numbers are represented in the format – `<grade><section>` (eg. `12E`, `3C`), and their directoriers exist in `~/se2001/practice_5.2`.
 
-There is a directory for every classroom in ` ~/se2001/practice_5.2 `.
+**Task** - Each classroom has 40 students and thus requires one file per student. Write a Bash command to create files named 1 to 40 in every classroom directory.
 
-Write a Bash command to create a file for each student, name the files from 1 to 40 in every directory.
-
+**Note** - Run `synchro init` to create the classroom directories.
