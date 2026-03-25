@@ -1,7 +1,5 @@
 # Week 5 Problem 1
 
-A school teaches from first to twelfth standard, each standard has 5 sections named as ` A ` to ` E `. 
+A school has grades from `1` to `12`, each with 5 sections `A` to `E`. Classroom numbers are represented in the format – `<grade><section>` (eg. `12E`, `3C`).
 
-The class room number is represented as standard (as number) followed by the section, for example ` 12E `, ` 3C `, etc..
-
-Your task is to create a directory for every classroom in directory ` ~/se2001/practice_5.1 `.
+**Task** - Create a directory for every classroom in directory `~/se2001/practice_5.1`.
